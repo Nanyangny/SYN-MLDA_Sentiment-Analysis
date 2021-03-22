@@ -1,4 +1,5 @@
-# SYN x MLDA Contextualized Graph-based Sentiment Analysis Tool
+# SYN x MLDA <br>Contextualized Graph-based <br>Sentiment Analysis Tool 😄😡😭😀😍
+
 
 ## Motivation
 In many contexts it is useful to understand the sentiment of text data, but current setiment analysis solutions are rubbish. 
@@ -21,7 +22,8 @@ Pipelines in the Sentiment Analysis Tool:
 
 ### Emotion Wheel
 We adopt Emotion & Feeling Wheel from [The Junto Institute](https://www.thejuntoinstitute.com/emotion-wheels/)
-##TODO Picture
+ <img src="/emotion_wheel.png" width="50%"> \
+  source:[https://www.thejuntoinstitute.com/emotion-wheels/](https://www.thejuntoinstitute.com/emotion-wheels/)
 
 ### Baseword Selection for Synonym Network
 In this POC studies, we select [IMDB review data](https://ai.stanford.edu/~amaas/data/sentiment/) as our primary corpus as the reviews contain wide range of emotions, which allow us to capture as many emotions as possible. We first find the top words from IMDB and rank them according to their frequency in the review dataset. Then, we compare the ranking with the [Google n-gram dataset](https://books.google.com/ngrams/info) to select 1k top words that share the same normalized ranking. 
@@ -35,8 +37,10 @@ We construct the network using undirected graph and unweighted edges with [Gelph
 ### Contextualized Emotion-denoting Word Prediction
 This is the most challenging part of the whole project. There are two goals we want to achieve here.
 * Contextualization of potential emo-denoting words in the sentence: \
-[BERT masked word prediction](http://jalammar.github.io/illustrated-bert/) is used to provide the context as the word predictions at the masked position can be used to infer the context.
-##TODO
+BERT masked word prediction is used to provide the context as the word predictions at the masked position can be used to infer the context.
+
+  <img src="/BERT.png" width="70%"> \
+  source:[http://jalammar.github.io/illustrated-bert/](http://jalammar.github.io/illustrated-bert/)
 
 * Emo-denoting predictioon based on context and the source word:\
 Since we have a SYN network, we can use each word's information in the network to predict whether it is emo-denoting using simple machine learning model (our ablative studies suggest that Random Forest Tree achieves the best F1-score). This part requires labelled data, a sample of such model input is in **output** folder 
@@ -62,5 +66,5 @@ Refer to **source_data** folder
 
 
 ## Acknowledgement
-We would like to thank [Synthesis Partner](https://www.linkedin.com/company/synthesispartners/) for this wonderful learning experience. It would not be possible without the consistent support and guidance from [Ankit](https://www.linkedin.com/in/kalkar/) and Synthesis strategiests. A big shoutout to them!
+We would like to thank [Synthesis Partner](https://www.linkedin.com/company/synthesispartners/) for this wonderful learning experience. It would not be possible without the consistent support and guidance from [Ankit](https://www.linkedin.com/in/kalkar/) and Synthesis strategiests. A big shoutout to them! 👏👏
 
