@@ -21,7 +21,7 @@ Pipelines in the Sentiment Analysis Tool:
 * Sentiment Prediction(Emotion Distribution Score Calculation)
 
 ### Emotion Wheel
-We adopt Emotion & Feeling Wheel from [The Junto Institute](https://www.thejuntoinstitute.com/emotion-wheels/)
+We adopt Emotion & Feeling Wheel from [The Junto Institute](https://www.thejuntoinstitute.com/emotion-wheels/) \
  <img src="/emotion_wheel.png" width="50%"> \
   source:[https://www.thejuntoinstitute.com/emotion-wheels/](https://www.thejuntoinstitute.com/emotion-wheels/)
 
